@@ -15,6 +15,7 @@ import { GoogleStorageStrategy } from "vendure-plugin-google-storage-assets";
 import { nanoid } from "./nanoid";
 import { HardenPlugin } from "@vendure/harden-plugin";
 
+
 const IS_DEV = process.env.APP_ENV === "dev";
 
 export const config: VendureConfig = {
@@ -59,6 +60,7 @@ export const config: VendureConfig = {
 		database: process.env.DB_NAME,
 		host: process.env.DB_HOST,
 		port: +process.env.DB_PORT,
+		ssl: true,
 		username: process.env.DB_USERNAME,
 		password: process.env.DB_PASSWORD,
 	},
